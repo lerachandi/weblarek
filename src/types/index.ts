@@ -34,8 +34,7 @@ export interface IGetProductsApiResponse {
   items: IProduct[];
 }
 
-export interface IOrderApiRequest extends Omit<IBuyer, "payment"> {
-  payment: TPayment | "";
+export interface IOrderApiRequest extends IBuyer {
   total: number;
   productIds: string[];
 }
